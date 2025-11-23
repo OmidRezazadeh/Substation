@@ -5,7 +5,6 @@ import { ClubModule } from './club/club.module';
 import { PrismaModule } from './prisma/prisma.module';
 import { PrismaService } from './prisma/prisma.service';
 import { setPrismaInstance } from './prisma/prisma.client';
-
 @Module({
   imports: [ClubModule, PrismaModule],
   controllers: [AppController],

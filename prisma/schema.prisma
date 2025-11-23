@@ -1,0 +1,22 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Substation {
+  id        Int       @id @default(autoincrement())
+  username  String
+  password  String
+  title     String
+  city      String
+  province  String
+  status    Int       @default(1)
+  ownerId   Int
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+  deletedAt DateTime?
+}
