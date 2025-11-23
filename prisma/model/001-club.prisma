@@ -1,0 +1,18 @@
+model Card {
+  id                     Int       @id @default(autoincrement())
+  userId                 Int?
+  dynamicPassword        String?   
+  dynamicPasswordExpired DateTime? 
+  cardNumber             String    @unique
+  pin                    String
+  expire                 DateTime
+  cvv2                   String
+  status                 Boolean   @default(true)
+  secPin                 String
+  type                   Int       @default(100)
+  shaba                  String    @unique
+  groupId                Int
+  createdAt              DateTime  @default(now())
+  updatedAt              DateTime  @updatedAt
+  deletedAt              DateTime?
+}
